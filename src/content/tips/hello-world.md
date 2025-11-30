@@ -1,9 +1,10 @@
 ---
 title: "Hello World"
-update: 2025-05-07
+pubDate: 2025-05-07
 description: "Hello this is a recomendation"
-image:
+image: "https://api.lorem.space/image/fashion?w=640&h=480&r=3027"
 tags: ["astro","js"]
+layout: "../../layouts/Post.astro"
 ---
 
 Amet occaecat aute aute incididunt ea deserunt velit.
