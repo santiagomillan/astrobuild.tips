@@ -3,9 +3,10 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection, render } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import Post from "../../layouts/Post.astro";
-import Header from "../../components/Header";
+import Header from "../../components/Header.tsx";
 import Footer from "../../components/Footer.vue";
-import Social from "../../components/Social.svelte";
+// import Social from "../../components/Social.svelte";
+import HeaderTop from "../../components/HeaderTop.tsx";
 
 export async function getStaticPaths() {
 	const posts = await getCollection("tips");
@@ -23,6 +24,7 @@ const { Content } = await render(entry);
 ---
 
 <Base title="AstroBuild.tips">
+	<HeaderTop client:load />
 	<Header title="AstroBuild.tips" />
 	<Post
 		content={{
@@ -36,6 +38,6 @@ const { Content } = await render(entry);
 			<Content />
 		</div>
 	</Post>
-	<Social />
+	<!-- <Social /> -->
 	<Footer />
 </Base>
